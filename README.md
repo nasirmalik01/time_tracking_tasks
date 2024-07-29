@@ -46,7 +46,8 @@ on each task and the date it was completed.
 - MVVM Architecture
 - Todoist Api for tasks data.
 - Firebase for the solutions that are not implemented by the APIs.
-
+  
+## App Screenshots
 &nbsp;  
 <img src="images/1.png" width=265, height:270> <img src="images/2.png" width=265, height:270> <img src="images/3.png" width=265, height:270>
 
