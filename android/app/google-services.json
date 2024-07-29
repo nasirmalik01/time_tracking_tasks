@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490073427340",
+    "project_id": "takehomechallenge-2ce6f",
+    "storage_bucket": "takehomechallenge-2ce6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490073427340:android:1bb46ac051f7d760e81aa9",
+        "android_client_info": {
+          "package_name": "com.example.take_home_challenge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd5NjezhLitDqXRz3K9jJJpoMabT36Uw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
