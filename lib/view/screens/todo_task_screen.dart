@@ -75,7 +75,8 @@ class ToDoTaskScreen extends StatelessWidget {
                                               state.toDoTaskList![index],
                                         )));
                             isOpenDialog = false;
-                            context.read<GetToDoTasksBloc>()
+                            context
+                                .read<GetToDoTasksBloc>()
                                 .add(GetToDoTasksLoadingEvent());
                           },
                           child: roundedContainer(
@@ -92,7 +93,8 @@ class ToDoTaskScreen extends StatelessWidget {
                                       EdgeInsets.only(left: sizes.width * 0.02),
                                   width: sizes.width * 0.7,
                                   child: TextView.title(
-                                      text: state.toDoTaskList?[index].content ??
+                                      text:
+                                          state.toDoTaskList?[index].content ??
                                               AppStrings.nullCheckErrorMessage,
                                       textSize: sizes.fontSize20,
                                       font: Fonts.poppinsSemiBold,
@@ -138,10 +140,11 @@ class ToDoTaskScreen extends StatelessWidget {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         TextView.title(
-                                          text:  AppStrings.comments,
+                                          text: AppStrings.dueDate,
                                           textSize: sizes.fontSize16,
                                         ),
                                         SizedBox(
