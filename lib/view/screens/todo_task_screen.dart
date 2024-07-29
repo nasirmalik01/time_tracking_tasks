@@ -141,7 +141,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         TextView.title(
-                                          text:  AppStrings.dueDate,
+                                          text:  AppStrings.comments,
                                           textSize: sizes.fontSize16,
                                         ),
                                         SizedBox(
