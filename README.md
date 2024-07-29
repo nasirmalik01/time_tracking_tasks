@@ -41,6 +41,9 @@ tracking the time spent on each task.
 - A history of completed tasks, including the time spent 
 on each task and the date it was completed.
 
+&nbsp;  
+<img src="images/1.png" width=265, height:270> <img src="images/1.png" width=265, height:270> <img src="images/1.png" width=265, height:270>
+
 ## App Structure
 - State management (Bloc)
 - MVVM Architecture
