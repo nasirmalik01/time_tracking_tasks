@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/colors.dart';
-import 'package:take_home_challenge/res/strings.dart';
 import 'package:take_home_challenge/view/widgets/icon_widget.dart';
 import 'package:take_home_challenge/view/widgets/textviews.dart';
 

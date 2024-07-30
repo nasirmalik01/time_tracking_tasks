@@ -3,7 +3,6 @@ import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
-import 'package:take_home_challenge/res/strings.dart';
 
 FloatingActionButton extendedFAB(BuildContext context, {String? title, Function()? onPress}){
   return FloatingActionButton.extended(
