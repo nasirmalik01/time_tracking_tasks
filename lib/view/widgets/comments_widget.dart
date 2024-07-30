@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/fonts.dart';
 import 'package:take_home_challenge/res/strings.dart';
-import 'package:take_home_challenge/view/widgets/rounded_container.dart';
 import 'package:take_home_challenge/view/widgets/textviews.dart';
 
 class CommentsWidget extends StatelessWidget {

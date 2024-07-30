@@ -7,6 +7,7 @@ import 'package:take_home_challenge/res/strings.dart';
 import 'package:take_home_challenge/utils/methods/methods.dart';
 
 class TodoTaskRepo{
+  /// Getting todo list
   static Future<List<ToDoTaskModel>?> getTodoTasksList() async {
     List<ToDoTaskModel> toDoTaskList = [];
     final response = await getItLocator<RemoteServices>()
@@ -24,6 +25,7 @@ class TodoTaskRepo{
     return toDoTaskList;
   }
 
+  /// Delete todo task
   static Future<void> deleteTodoTask({required String id}) async {
     final response = await getItLocator<RemoteServices>()
         .deleteRequest('/$id', {});
@@ -31,6 +33,8 @@ class TodoTaskRepo{
     print('Delete Request response: $response');
   }
 
+
+  /// Complete todo task
   static Future<void> finishTodoTask({
     required String id,
     Map<String, dynamic>? query

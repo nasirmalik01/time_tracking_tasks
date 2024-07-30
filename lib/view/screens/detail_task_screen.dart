@@ -16,9 +16,9 @@ import 'package:take_home_challenge/view/widgets/icon_widget.dart';
 import 'package:take_home_challenge/view/widgets/loader.dart';
 import 'package:take_home_challenge/view/widgets/rounded_container.dart';
 import 'package:take_home_challenge/view/widgets/textviews.dart';
-import 'package:take_home_challenge/view_model/bloc/detail_timer_task/detail_task_bloc.dart';
-import 'package:take_home_challenge/view_model/bloc/detail_timer_task/detail_task_events.dart';
-import 'package:take_home_challenge/view_model/bloc/detail_timer_task/detail_task_states.dart';
+import 'package:take_home_challenge/view_model/bloc/detail_todo_task/detail_task_bloc.dart';
+import 'package:take_home_challenge/view_model/bloc/detail_todo_task/detail_task_events.dart';
+import 'package:take_home_challenge/view_model/bloc/detail_todo_task/detail_task_states.dart';
 
 class DetailTaskScreen extends StatefulWidget {
   final ToDoTaskModel? toDoTaskModel;

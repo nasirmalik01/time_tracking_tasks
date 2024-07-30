@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/strings.dart';
 
+
+/// Get pending and completed tasks
 class InProgressAndCompletedTasksRepo {
   static Future<List> getTasks({String? docId}) async {
     List completedTaskModelList = [];

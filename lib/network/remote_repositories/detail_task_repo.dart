@@ -1,7 +1,8 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DetailTaskRepo {
+
+  /// Getting comments on task
   static Future<List> getComments({required String id}) async {
     List commentsList = [];
     await FirebaseFirestore.instance.collection(id)

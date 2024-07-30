@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:take_home_challenge/models/completed_task_model.dart';
 import 'package:take_home_challenge/network/remote_repositories/completed_task_repo.dart';
-import 'package:take_home_challenge/network/remote_repositories/todo_task_repo.dart';
 import 'package:take_home_challenge/res/strings.dart';
 import 'package:take_home_challenge/utils/methods/methods.dart';
 import 'package:take_home_challenge/view_model/bloc/in_progress_task/in_progress_task_events.dart';
@@ -45,13 +44,7 @@ class InProgressTasksBloc extends Bloc<InProgressTaskEvents, InProgressTasksStat
 
 
     on<InProgressFinishTodoEvent>((event, emit) async {
-      // return;
-
         emit(InProgressFinishTaskState());
-        // await TodoTaskRepo.finishTodoTask(
-        //   id: event.inProgressTaskList!['id']!
-        // );
-
         String formattedDate = getCurrentDateTime();
 
         CompletedTaskModel completedTaskModel = CompletedTaskModel(

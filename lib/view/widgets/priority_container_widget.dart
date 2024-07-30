@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
-import 'package:take_home_challenge/view/widgets/rounded_container.dart';
 import 'package:take_home_challenge/view/widgets/textviews.dart';
 
 Widget priorityContainerWidget({required String title, Function()? onTap, Color? bgColor}){

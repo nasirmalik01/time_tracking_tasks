@@ -5,10 +5,9 @@ import 'package:take_home_challenge/models/completed_task_model.dart';
 import 'package:take_home_challenge/network/remote_repositories/detail_task_repo.dart';
 import 'package:take_home_challenge/network/remote_repositories/todo_task_repo.dart';
 import 'package:take_home_challenge/res/strings.dart';
-import 'package:take_home_challenge/utils/helper_methods/snackbar.dart';
 import 'package:take_home_challenge/utils/methods/methods.dart';
-import 'package:take_home_challenge/view_model/bloc/detail_timer_task/detail_task_events.dart';
-import 'package:take_home_challenge/view_model/bloc/detail_timer_task/detail_task_states.dart';
+import 'package:take_home_challenge/view_model/bloc/detail_todo_task/detail_task_events.dart';
+import 'package:take_home_challenge/view_model/bloc/detail_todo_task/detail_task_states.dart';
 
 class DetailTaskBloc extends Bloc<DetailTaskEvents, DetailTaskStates> {
   List<dynamic>? commentList = [];

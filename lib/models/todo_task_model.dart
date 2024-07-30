@@ -57,13 +57,6 @@ class ToDoTaskModel {
     isCompleted = json['is_completed'];
     priorityLevel = priorityLevel;
     priorityColor = priorityColor;
-    // priorityLevel = json['is_completed'];
-    // if (json['labels'] != null) {
-    //   labels = <String>[];
-    //   json['labels'].forEach((v) {
-    //     labels!.add(new Label.fromJson(v));
-    //   });
-    // }
     priority = json['priority'];
     commentCount = json['comment_count'];
     creatorId = json['creator_id'];

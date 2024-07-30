@@ -9,7 +9,6 @@ import 'package:take_home_challenge/view/screens/add_new_task_screen.dart';
 import 'package:take_home_challenge/view/screens/detail_task_screen.dart';
 import 'package:take_home_challenge/view/screens/update_task_screen.dart';
 import 'package:take_home_challenge/view/widgets/floating_action_button.dart';
-import 'package:take_home_challenge/view/widgets/icon_widget.dart';
 import 'package:take_home_challenge/view/widgets/loader.dart';
 import 'package:take_home_challenge/view/widgets/rounded_container.dart';
 import 'package:take_home_challenge/view/widgets/task_icon_widget.dart';
@@ -75,9 +74,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                               state.toDoTaskList![index],
                                         )));
                             isOpenDialog = false;
-                            context
-                                .read<GetToDoTasksBloc>()
-                                .add(GetToDoTasksLoadingEvent());
+                            context.read<GetToDoTasksBloc>().add(GetToDoTasksLoadingEvent());
                           },
                           child: roundedContainer(
                               widget: Padding(
