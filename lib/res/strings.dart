@@ -1,7 +1,4 @@
 class AppStrings{
-  // static const appBarText = 'Time Tracking Tasks';
-  // static const toDo = 'To Do';
-  // static const inProgress = 'In Progress';
   static const completed = 'Completed';
   static const inProgressDocId = 'InProgress';
   static const nullCheckErrorMessage = 'Not defined';
