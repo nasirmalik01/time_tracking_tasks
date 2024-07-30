@@ -40,6 +40,7 @@ Its a time tracking app for tasks with following features:
 tracking the time spent on each task.
 - A history of completed tasks, including the time spent 
 on each task and the date it was completed.
+- Multi-language support (Bonus feature)
 
 ## App Structure
 - State management (Bloc)
@@ -51,6 +52,6 @@ on each task and the date it was completed.
 &nbsp;  
 <img src="images/1.png" width=265, height:270>  <img src="images/2.png" width=265, height:270>  <img src="images/3.png" width=265, height:270>
 <img src="images/4.png" width=265, height:270> <img src="images/5.png" width=265, height:270> <img src="images/6.png" width=265, height:270>
-<img src="images/7.png" width=265, height:270> <img src="images/8.png" width=265, height:270>
+<img src="images/7.png" width=265, height:270> <img src="images/8.png" width=265, height:270> <img src="images/9.png" width=265, height:270>
 
 
