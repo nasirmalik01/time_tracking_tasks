@@ -12,7 +12,6 @@ String getCurrentDateTime(){
   DateTime dateTime = DateTime.now();
   String formattedDate = DateFormat('yyyy-MM-dd').format(dateTime);
   return formattedDate;
-
 }
 
 

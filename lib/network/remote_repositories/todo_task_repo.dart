@@ -40,7 +40,7 @@ class TodoTaskRepo{
     Map<String, dynamic>? query
   }) async {
     final response = await getItLocator<RemoteServices>()
-        .postRequest('/$id/${AppStrings.close}', query ?? {});
+        .postRequest('/$id/${AppStrings. close}', query ?? {});
 
     print('Complete Request response: $response');
   }

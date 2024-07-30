@@ -10,12 +10,16 @@ class TextView{
     String? font,
     FontWeight? fontWeight,
     required double textSize,
-    TextAlign? textAlign
+    TextAlign? textAlign,
+    bool isOverFlow = false
   }){
     return Text(text,
       textAlign: textAlign ?? TextAlign.center,
       style:
       TextStyle(
+        overflow: isOverFlow
+          ? TextOverflow.ellipsis
+          : TextOverflow.visible,
         fontSize: textSize,
         color: color ?? AppColors.blackColor,
         fontFamily: font ?? Fonts.poppinsRegular,

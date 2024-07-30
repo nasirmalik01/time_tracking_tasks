@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/strings.dart';
@@ -39,8 +40,8 @@ class AddCommentWidget extends StatelessWidget {
               child: TextField(
                 keyboardType: TextInputType.text,
                 controller: controller,
-                decoration: const InputDecoration(
-                    hintText: AppStrings.addCommentHint,
+                decoration: InputDecoration(
+                    hintText: translation(context).addCommentHint,
                     border: InputBorder.none),
               ),
             ),

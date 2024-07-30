@@ -14,9 +14,12 @@ showLoaderDialog(BuildContext context, {String? title}){
           ),
           Container(
               margin: EdgeInsets.only(left: sizes.width * 0.1),
-              child: TextView.title(
-                  text: title ?? 'Loading your data',
-                  textSize: sizes.fontSize16
+              child: SizedBox(
+                width: sizes.width * 0.7,
+                child: TextView.title(
+                    text: title ?? 'Loading your data',
+                    textSize: sizes.fontSize16
+                ),
               )
           ),
         ],),

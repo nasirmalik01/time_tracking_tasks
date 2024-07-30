@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
@@ -55,7 +56,7 @@ class CompletedTaskScreen extends StatelessWidget {
                                 child: TextView.title(
                                     text:
                                         state.completedTaskList?[index]['task_name'] ??
-                                            AppStrings.nullCheckErrorMessage,
+                                            translation(context).nullCheckErrorMessage,
                                     textSize: sizes.fontSize20,
                                     font: Fonts.poppinsSemiBold,
                                     textAlign: TextAlign.start),
@@ -63,7 +64,7 @@ class CompletedTaskScreen extends StatelessWidget {
                               Column(
                                 children: [
                                   TextView.title(
-                                      text: AppStrings.timeSpent,
+                                      text: translation(context).timeSpent,
                                       textSize: sizes.fontSize16,
                                       color: AppColors.blackColor),
                                   TextView.title(
@@ -101,7 +102,7 @@ class CompletedTaskScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start ,
                                 children: [
                                   TextView.title(
-                                    text:  AppStrings.completedOn,
+                                    text:  translation(context).completedOn,
                                     textSize: sizes.fontSize16,
                                   ),
                                   TextView.title(
@@ -121,14 +122,18 @@ class CompletedTaskScreen extends StatelessWidget {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextView.title(
-                                    text:  AppStrings.dueDate,
-                                    textSize: sizes.fontSize16,
+                                  SizedBox(
+                                    width: sizes.width * 0.5,
+                                    child: TextView.title(
+                                      textAlign: TextAlign.start,
+                                      text:  translation(context).dueDate,
+                                      textSize: sizes.fontSize16,
+                                    ),
                                   ),
                                   TextView.title(
                                       text:
                                           state.completedTaskList?[index]['due_date'] ??
-                                              AppStrings.nullCheckErrorMessage,
+                                              translation(context).nullCheckErrorMessage,
                                       textSize: sizes.fontSize16),
                                 ],
                               ),
@@ -147,7 +152,7 @@ class CompletedTaskScreen extends StatelessWidget {
                                           vertical: sizes.width * 0.012,
                                       ),
                                       child: TextView.title(
-                                          text: AppStrings.remove,
+                                          text: translation(context).remove,
                                           textSize: sizes.fontSize16,
                                           color: AppColors.pureWhiteColor,
 

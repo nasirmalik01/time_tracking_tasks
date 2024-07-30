@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
@@ -34,7 +35,7 @@ class ToDoTaskScreen extends StatelessWidget {
           if (state is DeleteTodoTaskState) {
             loadingTitle = AppStrings.deletingTask;
           } else {
-            loadingTitle = AppStrings.finishingTask;
+            loadingTitle = translation(context).finishingTask;
           }
           isOpenDialog = true;
           showLoaderDialog(context, title: loadingTitle);
@@ -92,7 +93,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                   child: TextView.title(
                                       text:
                                           state.toDoTaskList?[index].content ??
-                                              AppStrings.nullCheckErrorMessage,
+                                              translation(context).nullCheckErrorMessage,
                                       textSize: sizes.fontSize20,
                                       font: Fonts.poppinsSemiBold,
                                       textAlign: TextAlign.start),
@@ -124,7 +125,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                               color: AppColors.pureWhiteColor),
                                         )),
                                     TextView.title(
-                                      text: AppStrings.pending,
+                                      text: translation(context).pending,
                                       textSize: sizes.fontSize16,
                                     ),
                                   ],
@@ -140,18 +141,20 @@ class ToDoTaskScreen extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        TextView.title(
-                                          text: AppStrings.dueDate,
-                                          textSize: sizes.fontSize16,
+                                        SizedBox(
+                                          width: sizes.width * 0.4,
+                                          child: TextView.title(
+                                            textAlign: TextAlign.start,
+                                            text: translation(context).dueDate,
+                                            textSize: sizes.fontSize16,
+                                          ),
                                         ),
                                         SizedBox(
                                           width: sizes.width * 0.02,
                                         ),
                                         TextView.title(
-                                            text: state.toDoTaskList![index].due
-                                                    ?.date ??
-                                                AppStrings
-                                                    .nullCheckErrorMessage,
+                                            text: state.toDoTaskList![index].due?.date
+                                                ?? translation(context).nullCheckErrorMessage,
                                             textSize: sizes.fontSize16)
                                       ],
                                     ),
@@ -159,6 +162,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         taskIconWidget(
+                                          context,
                                           onTap: () async {
                                             await Navigator.push(
                                                 context,
@@ -182,6 +186,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                           width: sizes.width * 0.01,
                                         ),
                                         taskIconWidget(
+                                          context,
                                           onTap: () {
                                             context
                                                 .read<GetToDoTasksBloc>()
@@ -197,6 +202,7 @@ class ToDoTaskScreen extends StatelessWidget {
                                           width: sizes.width * 0.01,
                                         ),
                                         taskIconWidget(
+                                            context,
                                             onTap: () {
                                               context
                                                   .read<GetToDoTasksBloc>()
@@ -219,7 +225,7 @@ class ToDoTaskScreen extends StatelessWidget {
                       );
                     }),
               ),
-              floatingActionButton: extendedFAB(onPress: () async {
+              floatingActionButton: extendedFAB(context, onPress: () async {
                 await Navigator.push(
                     context,
                     MaterialPageRoute(

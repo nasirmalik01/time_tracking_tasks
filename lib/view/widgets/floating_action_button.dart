@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
 import 'package:take_home_challenge/res/strings.dart';
 
-FloatingActionButton extendedFAB({String? title, Function()? onPress}){
+FloatingActionButton extendedFAB(BuildContext context, {String? title, Function()? onPress}){
   return FloatingActionButton.extended(
     shape: const StadiumBorder(),
     backgroundColor: AppColors.pinkColor,
     onPressed: onPress,
     label: Text(
-       title ?? AppStrings.addNewTask,
+       title ?? translation(context).addNewTask,
       style:
       TextStyle(
         fontSize: sizes.fontSize16,

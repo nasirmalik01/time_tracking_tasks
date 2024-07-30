@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
@@ -21,7 +22,7 @@ class InProgressScreen extends StatelessWidget {
     return BlocConsumer<InProgressTasksBloc, InProgressTasksStates>(
       listener: (BuildContext context, InProgressTasksStates state) {
         if(state is InProgressFinishTaskState){
-          showLoaderDialog(context, title: AppStrings.finishingTask);
+          showLoaderDialog(context, title: translation(context).finishingTask);
         }
 
         if(state is InProgressSuccessTaskState){
@@ -72,7 +73,7 @@ class InProgressScreen extends StatelessWidget {
                                           child: TextView.title(
                                               text:
                                               state.inProgressTaskList?[index]['task_name'] ??
-                                                  AppStrings.nullCheckErrorMessage,
+                                                  translation(context).nullCheckErrorMessage,
                                               textSize: sizes.fontSize20,
                                               font: Fonts.poppinsSemiBold,
                                               textAlign: TextAlign.start),
@@ -80,7 +81,7 @@ class InProgressScreen extends StatelessWidget {
                                         Row(
                                           children: [
                                             TextView.title(
-                                                text: AppStrings.onGoing,
+                                                text: translation(context).onGoing,
                                                 textSize: sizes.fontSize14,
                                                 color: AppColors.blackColor),
                                             TextView.title(
@@ -117,7 +118,7 @@ class InProgressScreen extends StatelessWidget {
                                                   color: AppColors.pureWhiteColor),
                                             )),
                                         TextView.title(
-                                          text: AppStrings.inProgress,
+                                          text: translation(context).inProgress,
                                           textSize: sizes.fontSize16,),
 
                                       ],
@@ -132,14 +133,19 @@ class InProgressScreen extends StatelessWidget {
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            TextView.title(
-                                              text:  AppStrings.dueDate,
-                                              textSize: sizes.fontSize16,
+                                            SizedBox(
+                                              width: sizes.width * 0.3,
+                                              child: TextView.title(
+                                                isOverFlow: true,
+                                                textAlign: TextAlign.start,
+                                                text:  translation(context).dueDate,
+                                                textSize: sizes.fontSize16,
+                                              ),
                                             ),
                                             TextView.title(
                                                 text:
                                                 state.inProgressTaskList?[index]['due_date'] ??
-                                                    AppStrings.nullCheckErrorMessage,
+                                                    translation(context).nullCheckErrorMessage,
                                                 textSize: sizes.fontSize16),
                                           ],
                                         ),
@@ -161,7 +167,7 @@ class InProgressScreen extends StatelessWidget {
                                                       vertical: sizes.width * 0.012,
                                                     ),
                                                     child: TextView.title(
-                                                      text: AppStrings.finish,
+                                                      text: translation(context).finish,
                                                       textSize: sizes.fontSize16,
                                                       color: AppColors.pureWhiteColor,
 
@@ -184,7 +190,7 @@ class InProgressScreen extends StatelessWidget {
                                                       vertical: sizes.width * 0.012,
                                                     ),
                                                     child: TextView.title(
-                                                      text: AppStrings.remove,
+                                                      text: translation(context).remove,
                                                       textSize: sizes.fontSize16,
                                                       color: AppColors.pureWhiteColor,
 

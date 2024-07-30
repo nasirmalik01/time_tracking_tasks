@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/models/todo_task_model.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
@@ -123,7 +124,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                         ),
                         SizedBox(width: sizes.width * 0.03,),
                         TextView.title(
-                            text: AppStrings.updateTask,
+                            text: translation(context).updateTask,
                             textSize: sizes.fontSize18,
                             font: Fonts.poppinsSemiBold
                         )
@@ -133,25 +134,29 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                     TextFieldWidget(
                       textEditingController: titleController,
                       bgColor: AppColors.lightGrey,
-                      hint: AppStrings.enterTitle,
+                      hint: translation(context).enterTitle,
                       borderColor: AppColors.greyColor.withOpacity(0.3),
                     ),
                     SizedBox(height: sizes.height * 0.02,),
                     TextFieldWidget(
                       textEditingController: descController,
                       bgColor: AppColors.lightGrey,
-                      hint: AppStrings.enterDesc,
+                      hint: translation(context).enterDesc,
                       borderColor: AppColors.greyColor.withOpacity(0.3),
                     ),
                     SizedBox(height: sizes.height * 0.03,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextView.title(
-                            text: AppStrings.selectDueDate,
-                            textSize: sizes.fontSize17,
-                            fontWeight: FontWeight.bold
+                        SizedBox(
+                          width: sizes.width * 0.4,
+                          child: TextView.title(
+                              textAlign: TextAlign.start,
+                              text: translation(context).selectDueDate,
+                              textSize: sizes.fontSize17,
+                              fontWeight: FontWeight.bold
 
+                          ),
                         ),
                         SizedBox(width: sizes.width * 0.04,),
                         GestureDetector(
@@ -175,10 +180,14 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                                         size: sizes.height * 0.025
                                     ),
                                     SizedBox(width: sizes.width * 0.03,),
-                                    TextView.title(
-                                        text: AppStrings.openCalender,
-                                        textSize: sizes.fontSize16,
-                                        color: AppColors.pureWhiteColor
+                                    SizedBox(
+                                      width: sizes.width * 0.3,
+                                      child: TextView.title(
+                                          isOverFlow: true,
+                                          text: translation(context).openCalender,
+                                          textSize: sizes.fontSize16,
+                                          color: AppColors.pureWhiteColor
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -193,7 +202,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                       SizedBox(height: sizes.height * 0.02,),
                       Center(
                         child: TextView.title(
-                            text: '${AppStrings.youHaveSelected} $formattedDate',
+                            text: '${translation(context).youHaveSelected} $formattedDate',
                             textSize: sizes.fontSize16
                         ),
                       ),
@@ -201,7 +210,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                     : Container(),
                     SizedBox(height: sizes.height * 0.03,),
                     TextView.title(
-                        text: AppStrings.selectTaskPriority,
+                        text: translation(context).selectTaskPriority,
                         textSize: sizes.fontSize17,
                         fontWeight: FontWeight.bold
                     ),
@@ -218,7 +227,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                             onTap: (){
                               updatePriorityLevel(AppStrings.normal);
                             },
-                            title: AppStrings.normal
+                            title: translation(context).normal
                         ),
                         priorityContainerWidget(
                             bgColor: priorityLevel == AppStrings.notImportant
@@ -227,7 +236,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                             onTap: (){
                               updatePriorityLevel(AppStrings.notImportant);
                             },
-                            title: AppStrings.notImportant),
+                            title: translation(context).notImportant),
 
                       ],
                     ),
@@ -243,7 +252,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                             onTap: (){
                               updatePriorityLevel(AppStrings.important);
                             },
-                            title: AppStrings.important),
+                            title: translation(context).important),
                         priorityContainerWidget(
                             bgColor: priorityLevel == AppStrings.urgent
                                 ? AppColors.pinkColor
@@ -251,7 +260,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                             onTap: (){
                               updatePriorityLevel(AppStrings.urgent);
                             },
-                            title: AppStrings.urgent),
+                            title: translation(context).urgent),
                       ],
                     ),
                     SizedBox(height: sizes.height * 0.05,),
@@ -275,7 +284,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                           );
                         },
                         width: sizes.width * 0.9,
-                        text: AppStrings.updateTask,
+                        text: translation(context).updateTask,
                         btnColor: AppColors.pinkColor,
                       ),
                     )
@@ -291,7 +300,7 @@ class _UpdateTaskScreenState extends State<UpdateTaskScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   TextView.title(
-                      text: AppStrings.updatingTask,
+                      text: translation(context).updatingTask,
                       textSize: sizes.fontSize16,
                   ),
                   SizedBox(height: sizes.height * 0.03,),

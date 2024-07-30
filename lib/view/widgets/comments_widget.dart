@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/fonts.dart';
 import 'package:take_home_challenge/res/strings.dart';
@@ -28,7 +29,7 @@ class CommentsWidget extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: sizes.height * 0.04,),
             TextView.title(
-                text: AppStrings.comments,
+                text: translation(context).comments,
                 textSize: sizes.fontSize22,
                 font: Fonts.poppinsRegular,
                 fontWeight: FontWeight.w500

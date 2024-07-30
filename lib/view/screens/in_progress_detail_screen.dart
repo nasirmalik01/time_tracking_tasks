@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:take_home_challenge/config/language_constants.dart';
 import 'package:take_home_challenge/res/app_generics/generics.dart';
 import 'package:take_home_challenge/res/colors.dart';
 import 'package:take_home_challenge/res/fonts.dart';
@@ -61,27 +62,27 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
               case CompleteTaskState():
                 showLoaderDialog(
                     context,
-                    title: AppStrings.finishingTask
+                    title: translation(context).finishingTask
                 );
                 break;
 
               case InProgressTaskLoadingState():
                 showLoaderDialog(
                     context,
-                    title: AppStrings.savingTask
+                    title: translation(context).savingTask
                 );
                 break;
 
               case AddingCommentLoadingState():
                 showLoaderDialog(
                     context,
-                    title: AppStrings.savingComment
+                    title: translation(context).savingComment
                 );
                 break;
 
               case CommentAddedState():
                 commentController.clear();
-                showSnackBar(context, message: AppStrings.commentAdded);
+                showSnackBar(context, message: translation(context).commentAdded);
                 Navigator.pop(context);
                 break;
 
@@ -94,7 +95,7 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
               else if (state.isDialogOpen == 2){
                 Navigator.pop(context);
                 commentController.clear();
-                showSnackBar(context, message: AppStrings.commentAdded);
+                showSnackBar(context, message: translation(context).commentAdded);
               }
               else {
                 Navigator.pop(context);
@@ -205,7 +206,7 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
                               },
                               width: sizes.width * 0.4,
                               btnColor: AppColors.pinkColor,
-                              text: AppStrings.save,
+                              text: translation(context).save,
                               textSize: sizes.fontSize18,
                             ),
                             Button(
@@ -220,7 +221,7 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
                               },
                               width: sizes.width * 0.4,
                               btnColor: AppColors.pinkColor,
-                              text: AppStrings.finish,
+                              text: translation(context).finish,
                               textSize: sizes.fontSize18,
                             ),
                           ],
@@ -249,7 +250,7 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
                                   vertical: sizes.height * 0.02,
                                 ),
                                 child: TextView.title(
-                                    text: AppStrings.tapToSeeComments,
+                                    text: translation(context).tapToSeeComments,
                                     textSize: sizes.fontSize16
                                 ),
                               )
@@ -265,7 +266,7 @@ class _InProgressDetailTaskScreenState extends State<InProgressDetailTaskScreen>
                       onPress: (){
                         if(commentController.text == ''){
                           return showSnackBar(
-                              context, message: AppStrings.emptyCommentErrorMessage);
+                              context, message: translation(context).emptyCommentErrorMessage);
                         }
                         context.read<InProgressDetailBloc>().add(
                             AddCommentEvent(

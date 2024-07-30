@@ -38,14 +38,17 @@ dependencies:
   dio: ^5.5.0+1
   get_it: ^7.6.7
   flutter_bloc: ^8.1.6
-  intl: ^0.19.0
+  intl: any
   firebase_core: ^2.27.0
   cloud_firestore: ^4.15.8
   stop_watch_timer: ^3.1.1
+  flutter_localizations: # Add this line
+    sdk: flutter # Add this line
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -53,12 +56,14 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.4.8
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
