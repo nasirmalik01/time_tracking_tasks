@@ -10,5 +10,4 @@ class CompletedTasksLoadedState extends CompletedTasksStates {
 
 class CompletedTasksErrorState extends CompletedTasksStates {}
 
-class DeleteTodoTaskState extends CompletedTasksStates {}
 

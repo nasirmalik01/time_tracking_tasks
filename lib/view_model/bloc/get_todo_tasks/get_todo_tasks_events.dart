@@ -4,8 +4,6 @@ import 'package:take_home_challenge/models/todo_task_model.dart';
 class GetToDoTasksEvents{}
 
 class GetToDoTasksLoadingEvent extends GetToDoTasksEvents{}
-class GetToDoTasksLoadedEvent extends GetToDoTasksEvents{}
-class GetToDoTasksErrorEvent extends GetToDoTasksEvents{}
 class DeleteTodoTaskEvent extends GetToDoTasksEvents{
   String id;
   DeleteTodoTaskEvent(this.id);

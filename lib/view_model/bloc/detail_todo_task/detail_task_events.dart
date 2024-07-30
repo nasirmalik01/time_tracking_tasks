@@ -2,10 +2,6 @@ import 'package:take_home_challenge/models/todo_task_model.dart';
 
 class  DetailTaskEvents{}
 
-// class InitialEvent extends DetailTaskEvents{
-//   String id;
-//   InitialEvent({required this.id});
-// }
 class InProgressTaskEvent extends DetailTaskEvents{
   final ToDoTaskModel toDoTaskModel;
   final String taskTime;

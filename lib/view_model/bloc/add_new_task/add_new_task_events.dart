@@ -18,6 +18,5 @@ class AddNewTodoTaskLoadingEvent extends AddNewToDoTasksEvents{
         required this.taskPriority
   });
 }
-class AddNewToDoTaskSuccessEvent extends AddNewToDoTasksEvents{}
+
 class InitialEvent extends AddNewToDoTasksEvents{}
-class AddNewTodoTaskErrorEvent extends AddNewToDoTasksEvents{}

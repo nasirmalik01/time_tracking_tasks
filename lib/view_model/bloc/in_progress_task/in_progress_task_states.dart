@@ -8,7 +8,6 @@ class InProgressTasksLoadedState extends InProgressTasksStates {
 }
 
 class InProgressTasksErrorState extends InProgressTasksStates {}
-class InProgressTodoTaskState extends InProgressTasksStates {}
 class InProgressFinishTaskState extends InProgressTasksStates {}
 class InProgressSuccessTaskState extends InProgressTasksStates {}
 

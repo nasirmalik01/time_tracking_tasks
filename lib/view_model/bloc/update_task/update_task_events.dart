@@ -20,6 +20,5 @@ class UpdateTaskLoadingEvent extends UpdateTaskEvents{
         required this.taskPriority
   });
 }
-class UpdateTaskSuccessEvent extends UpdateTaskEvents{}
+
 class InitialEvent extends UpdateTaskEvents{}
-class UpdateTaskErrorEvent extends UpdateTaskEvents{}
